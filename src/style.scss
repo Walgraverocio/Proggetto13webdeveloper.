@@ -55,6 +55,10 @@ $btn-padding-x: 1.2rem;
 
 // Utilities
 @import "bootstrap/scss/utilities/api";
+//Icone di bootstrap
+$bootstrap-icons-font-dir: "bootstrap-icons/font/fonts";
+@import "bootstrap-icons/font/bootstrap-icons";
+
 
 .bi:hover{
     color:#05090a
