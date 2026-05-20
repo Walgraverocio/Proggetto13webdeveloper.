@@ -14,3 +14,33 @@ import './style.scss'
 // import 'bootstrap/js/dist/tab';
 // import 'bootstrap/js/dist/toast';
 // import 'bootstrap/js/dist/tooltip';
+
+const formContatti = document.querySelector("#contatti form");
+    let contenitoreMessagio = document.createElement("div");
+
+    formContatti.addEventListener("submit", (event)=>{
+
+        event.preventDefault(); // TECNICA - AJAX
+
+        if ( formContatti.checkValidity() ){
+
+            contenitoreMessagio.innerHTML = `<div class="alert alert-success" role="alert">
+  Form inviato con successo!
+</div>`
+        formContatti.parentElement.appendChild(contenitoreMessagio);
+
+
+        } else {
+
+            formContatti.classList.add("was-validated");
+             contenitoreMessagio.innerHTML = `<div class="alert alert-danger" role="alert">
+  Form  non inviato!
+</div>`
+        formContatti.parentElement.appendChild(contenitoreMessagio);
+
+
+        }
+
+
+
+    });
